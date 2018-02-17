@@ -76,8 +76,9 @@ RUN groupadd --gid 3434 circleci \
 
 # BEGIN IMAGE CUSTOMIZATIONS
 
-COPY install-mono.sh install-mono.sh
+COPY install-mono.sh install-nunit.sh .
 RUN /bin/bash install-mono.sh
+RUN /bin/bash install-nunit.sh
 
 # END IMAGE CUSTOMIZATIONS
 
