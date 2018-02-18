@@ -84,6 +84,9 @@ COPY install-unity.sh UnitySetup-2017.3.1f1 /
 RUN /bin/bash install-unity.sh
 RUN chown -R circleci:circleci /Unity
 
+COPY install-ansible.sh /
+RUN /bin/bash install-ansible.sh
+
 # END IMAGE CUSTOMIZATIONS
 
 USER circleci
