@@ -80,6 +80,10 @@ COPY install-mono.sh install-nunit.sh /
 RUN /bin/bash install-mono.sh
 RUN /bin/bash install-nunit.sh
 
+COPY install-unity.sh UnitySetup-2017.3.1f1 /
+RUN /bin/bash install-unity.sh
+RUN chown -R circleci:circleci /Unity
+
 # END IMAGE CUSTOMIZATIONS
 
 USER circleci
